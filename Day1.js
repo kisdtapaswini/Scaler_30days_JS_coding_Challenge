@@ -1,7 +1,11 @@
-function capitalize(str){
-    let wordArr = str.split(" ");
-    wordArr.forEach((_, idx)=>wordArr[idx] = _.charAt(0).toUpperCase() + wordArr[idx].slice(1));
-    return wordArr.join(" ");
+function reverseNum(num){
+    let reversedNum = 0;
+    while(num){
+       let digit = num % 10;
+       reversedNum = (reversedNum * 10) + digit;
+       num = parseInt(num/10);
+    }
+    return reversedNum;
 }
+console.log(reverseNum(32243));
 
-console.log(capitalize("the quick brown fox"));
