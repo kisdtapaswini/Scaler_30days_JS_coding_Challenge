@@ -1,16 +1,22 @@
-function getSubSetWithFixedLength(arr, len){
-    if(len > arr.length){
-        return "invalid input";
-    }
-    for(let i = 0; i < arr.length; i++){
-      
 
+function getSubSetWithFixedLength(arr, n, ans, currentIdx){
+    if(currentIdx >= arr.length){
+        if(ans.length === n){
+            finalAns.push([...ans]);
+        }
+        return;
     }
+    ans.push(arr[currentIdx]);
+    getSubSetWithFixedLength(arr, n, ans, currentIdx+1);
+    ans.pop();
+    getSubSetWithFixedLength(arr, n, ans, currentIdx+1);
 
 }
 
-console.log(getSubSetWithFixedLength([1,2,3], 2));
+let finalAns = new Array();
+let inputArray = [1, 2, 3, 4, 5]
+getSubSetWithFixedLength(inputArray, 3, [], 0);
+console.log(finalAns);
 
-// [1,2,3]
-//     [2,1],[3,1],[3,2],[3,2,1]
+
 
