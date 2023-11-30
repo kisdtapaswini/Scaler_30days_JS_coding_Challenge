@@ -1,13 +1,13 @@
 function doBubbleSort(arr){
     for(let i = 0; i < arr.length; i++){
-        let swapFlag = false;
+        let count = 0;
         for(let j = 1; j < arr.length; j++){
             if(arr[j-1] < arr[j]){
                 swap(arr, j-1, j);
-                swapFlag = true;
+                count++;
             }
         }
-        if(!swapFlag){
+        if(count === 0){
             return arr;
         }
 }
