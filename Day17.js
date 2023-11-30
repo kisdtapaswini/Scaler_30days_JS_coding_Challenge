@@ -1,6 +1,6 @@
 function filterOutOdd(arr){
-    return arr.filter((val)=>{
-        return val%2  === 0;
+    return arr.map((val)=>{
+        return val*2;
     })
 
 }
