@@ -33,7 +33,7 @@ let inPutObj1 = {
 
 let inPutObj2 = {
     name1 : "Mili",
-    age1 : 34
+    age : 34
 }
 
 console.log(doObjDeepCompare(inPutObj1, inPutObj2));
