@@ -22,7 +22,3 @@ function saveInput(){
 }
 
 const processChange = debounce(() => saveInput(), 0);
-
-for(let i = 0; i<= 100000 ; i++){
-    processChange();
-}
