@@ -7,7 +7,7 @@ function raceWithTimeout(promises, timeout){
     return Promise.race([...promises, timeoutPromise])
 }
 
-const PromiseOne = new Promise((resolve, reject)=>{
+const PromiseOne =  new Promise((resolve, reject)=>{
     setTimeout(resolve, 100, 'one');
 });
 
